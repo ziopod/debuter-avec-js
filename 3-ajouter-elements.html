@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajouter des élements au DOM</title>
+    <script>
+      // API Window
+      // https://developer.mozilla.org/fr/docs/Web/API/Window
+      // Gestionnaire d'évenement load
+      window.addEventListener("load", function() {
+        // ici le DOM est disponible
+        // Ajouter des elements au DOM
+        // https://developer.mozilla.org/fr/docs/Glossary/DOM
+        // Un tableau
+        const cats = ["Hella", "Yoongi", "Crescent", "Finnian", "Haiku", "Hocu Pocus"]
+        // Récupérer un élement du DOM
+        const ul = document.getElementById("cats-list")
+        
+        // Passer le tableau en revue avec un boucle
+        for (cat of cats) {
+          console.log("Le nom du chat est " + cat)
+          // Créer un element pour le DOM
+          const li = document.createElement("li")
+          // Modifier l'élement
+          li.innerHTML = cat
+          // Injecte l'élement
+          ul.append(li)
+        }
+      })
+      </script>
+  </head>
+  <body>
+    <p><a href="/">← retour</a></p>
+    <h1>Ajouter des élement au DOM</h1>
+    <p>
+      Le code de cette exercice doit afficher des noms de chats sous forme de liste HTML.
+    </p>
+    <p>
+      Documentation MDN, <a href="https://developer.mozilla.org/fr/docs/Glossary/DOM">que'est-ce que le DOM</a>
+    </p>
+    <ul id="cats-list"></ul>
+  </body>
+</html>

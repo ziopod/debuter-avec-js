@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Les variables</title>
+    <script>
+      // Opérateur d'assignement `=`
+      // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Assignment
+      var toto = "Hello " // Type chaine de texte (string)
+      toto = toto.concat("world !")
+      console.log(toto)
+      // Essai avec des nombres
+      var tata = 3 // Type nombre (number)
+      // Opérateur mathématique `+`, `-`, '/', `*`
+      tata = tata - 4
+      console.log(tata)
+
+      // Portée des variables
+      // Le bloc de code définie par les accolades `{` et `}` limite
+      // la portée des variables.
+      {
+        var variableGlobale = "Hi!"
+        // Variable locale contante
+        const variableLocale = "Salut!"
+        console.log(variableLocale)
+        // Variable locale modifiable
+        let variableLocaleModifiable = "Holà"
+        variableLocaleModifiable = "Holà amigo"
+        console.log(variableLocaleModifiable)
+      }
+      console.log(variableGlobale)
+
+    </script>
+  </head>
+  <body>
+    <p><a href="/">← retour</a></p>
+    <h1>Les variables</h1>
+    <p>
+      Le code de cette page s'affiche dans la console. Pour ouvrir la console utilisez <code>cmd + alt + i</code> sous MacOS et <code>ctrl + maj + i</code> sous Windows.
+    </p>
+    <p>
+      Documentation MDN, <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Grammar_and_types">déclarationde variables et types de données</a>.
+    </p>
+  </body>
+</html>

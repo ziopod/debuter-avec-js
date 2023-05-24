@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10 print</title>
+    <style>
+      body {
+        font-family: monospace;
+        font-size: 40px;
+        line-height: .8em;
+        letter-spacing: -.23em;
+        /* word-break: break-all; */
+        overflow-wrap: break-word;
+      }
+    </style>
+    <script>
+      // Art génératif 
+      // https://fr.wikipedia.org/wiki/Art_g%C3%A9n%C3%A9ratif
+      window.addEventListener("load", function() {
+        let str = ""
+        for (var i = 0; i < 2500; i ++ ) {
+          if (Math.random() < 0.5) {
+            str += "/"
+          } else {
+            str += "\\"
+          }
+        }
+        document.body.innerHTML = str
+      })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
