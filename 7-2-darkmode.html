@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dark mode version JS</title>
+  <style>
+    .dark {
+      color: white;
+      background: black; 
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function() {
+      const toggleButton = document.querySelector("#toggle-button")
+      const body = document.querySelector("body")
+      // Un écouteru d'évenement peut être utilisé pour
+      // la plupart des élement HTML.
+      // Ici nous écoutons l'évenement "click" du bouton.
+      toggleButton.addEventListener("click", function() {
+        body.classList.toggle("dark")
+      })
+    })
+  </script>
+</head>
+<body>
+  <h1>Dark mode version JS</h1>
+  <button id="toggle-button">Activer/Désactiver le dark mode </button>
+</body>
+</html>

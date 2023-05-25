@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Element</title>
+  <script>
+    window.addEventListener("load", function() {
+     // 1. récupérer dans un variable "boite-information"
+     const boiteInformations = document.querySelector("#boite-information")
+     // 2. ajouter un évenement à "bouton-supprimer"
+     const boutonSupprimer = document.querySelector("#bouton-supprimer")
+     // 3. event => supprimer "boite-information"
+     boutonSupprimer.addEventListener("click", function() {
+      boiteInformations.remove()
+     })
+    })
+  </script>
+</head>
+<body>
+  <h1>API Element</h1>
+
+  <div id="boite-information">
+    <h2>Boite d'information<h2>
+    <p>Ceci est une information importante.</p>
+    <button id="bouton-supprimer">Supprimer</button>
+  </div>
+
+</body>
+</html>
