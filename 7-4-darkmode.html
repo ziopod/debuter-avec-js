@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dark mode JS, CSS et stockage local</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: black;
+        color: white;
+      }
+    }
+    /* Deux classes CSS qui seront manipulées par JS */
+    .light {
+      color: black;
+      background: white;
+    }
+    .dark {
+      color: white;
+      background: black; 
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function() {
+      const toggleButton = document.querySelector("#toggle-button")
+      const body = document.querySelector("body")
+      toggleButton.addEventListener("click", function() {
+        // Usage de `Element.classList.contains` pour chercher
+        // une classe spécifique de l'élement.
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark")
+          body.classList.add("light")
+          toggleButton.textContent = "Activer le mode sombre"
+          window.localStorage.setItem("theme", "light")
+        } else {
+          body.classList.remove("light")
+          body.classList.add("dark")
+          toggleButton.textContent = "Désactiver le mode sombre"
+          window.localStorage.setItem("theme", "dark")
+        }
+      })
+
+      // Appliquer le thème au chargement de la page.
+      const currentTheme = window.localStorage.getItem("theme")
+      if (currentTheme == "dark") {
+        body.classList.add("dark")
+      } else if (currenTheme == "light") {
+        body.classList.add("light")
+      }
+    })
+  </script>
+</head>
+<body>
+  <h1>Dark mode JS, CSS et stockage local</h1>
+  <button id="toggle-button">Activer le dark mode </button>
+</body>
+</html>
