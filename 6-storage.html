@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local storage</title>
+  <script>
+    window.addEventListener("load", function() {
+      const input = document.querySelector("#input")
+      const output = document.querySelector("#output")
+      
+      // Gestionnaire d'évenement
+      input.addEventListener("input", function(event) {
+        window.localStorage.setItem("message", event.target.value)
+        output.textContent = event.target.value
+      })
+
+      // Afficher le message
+      output.textContent = window.localStorage.getItem("message")
+    })
+  </script>
+</head>
+<body>
+  <h1>Local Storage</h1>
+  <input id="input" type="text" />
+  <pre id="output"></pre>
+</body>
+</html>
